@@ -268,7 +268,6 @@ def main():
         fast_dev_run=args.test_mode,
         num_sanity_val_steps=None if args.test_mode else 0,
         precision=16 if args.fp16 else 32,
-        accelerator='ddp',
         callbacks=[checkpoint_callback],
         logger=tb_logger,
         move_metrics_to_cpu=True,
