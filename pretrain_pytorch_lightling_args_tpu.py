@@ -270,7 +270,6 @@ def main():
         precision=16 if args.fp16 else 32,
         callbacks=[checkpoint_callback],
         logger=tb_logger,
-        move_metrics_to_cpu=True,
         # For TPU Setup
         tpu_cores=args.tpu_cores if args.tpu_cores else None,
     )
