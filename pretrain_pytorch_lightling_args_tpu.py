@@ -178,7 +178,7 @@ def get_exp_id(file):
     return os.path.splitext(os.path.basename(file))[0]
 
 
-def getls_output_path(exp_id):
+def get_output_path(exp_id):
     import datetime
     t = datetime.datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
     output_path = os.path.join('output/' + exp_id, t)
