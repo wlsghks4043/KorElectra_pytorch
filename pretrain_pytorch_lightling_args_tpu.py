@@ -267,9 +267,6 @@ def main():
         max_epochs=args.epochs,
         fast_dev_run=args.test_mode,
         num_sanity_val_steps=None if args.test_mode else 0,
-        # For GPU Setup
-        deterministic=torch.cuda.is_available(),
-        gpus=-1 if torch.cuda.is_available() else None,
         precision=16 if args.fp16 else 32,
         accelerator='ddp',
         callbacks=[checkpoint_callback],
